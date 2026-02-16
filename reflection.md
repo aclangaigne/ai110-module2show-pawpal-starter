@@ -1,6 +1,29 @@
 # PawPal+ Project Reflection
 
 ## 1. System Design
+Add a pet: User can create a pet profile (name/species/age) and store it under their owner account.
+
+Schedule a task: User can add a task (walk, feeding, meds, appointment) to a specific pet with a time + frequency.
+
+View today’s schedule: User can generate a sorted list of all tasks due today across all pets, so they know what to do next.
+
+### Building Blocks (Objects)
+
+**Owner**
+- Attributes: name, pets (list of Pet)
+- Methods: add_pet(pet), get_all_tasks()
+
+**Pet**
+- Attributes: name, species, age, tasks (list of Task)
+- Methods: add_task(task), get_tasks()
+
+**Task**
+- Attributes: description, time, frequency, completed
+- Methods: mark_complete()
+
+**Scheduler**
+- Attributes: none required (logic-only)
+- Methods: get_today_tasks(owner), sort_tasks(tasks), detect_conflicts(tasks)
 
 **a. Initial design**
 
